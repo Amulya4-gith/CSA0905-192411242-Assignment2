@@ -1,0 +1,13 @@
+n,map,put_ms,100k_lookups_ms,ns_per_lookup,iterate_ms,report_code_order_ms,report_insertion_order_ms,code_order_ok,insertion_order_ok
+1000,HashMap,0.21,2.90,29.0,1.121,1.459,0.003,true,true
+1000,LinkedHashMap,0.83,3.41,34.1,0.093,1.128,0.030,true,true
+1000,TreeMap,0.60,24.90,249.0,0.085,0.101,0.001,true,true
+1000,SortedArray+binarySearch,-,17.75,177.5,-,0 (already sorted),-,-,-  | 1000 inserts: 13.29 ms
+10000,HashMap,2.95,2.85,28.5,1.096,7.065,0.004,true,true
+10000,LinkedHashMap,2.81,2.86,28.6,0.647,6.197,0.270,true,true
+10000,TreeMap,5.08,40.35,403.5,1.193,1.806,0.004,true,true
+10000,SortedArray+binarySearch,-,47.77,477.7,-,0 (already sorted),-,-,-  | 1000 inserts: 3.64 ms
+100000,HashMap,42.24,7.08,70.8,6.165,53.410,0.015,true,true
+100000,LinkedHashMap,20.25,5.11,51.1,2.275,55.008,4.532,true,true
+100000,TreeMap,81.55,72.72,727.2,6.579,5.584,0.010,true,true
+100000,SortedArray+binarySearch,-,58.06,580.6,-,0 (already sorted),-,-,-  | 1000 inserts: 6.71 ms

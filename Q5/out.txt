@@ -1,0 +1,9 @@
+[Eagles(9,6), Bisons(9,4), Panthers(9,4), Cobras(6,1)]
+Set 1 : [Hotel(10,1), Bravo(7,2), Charlie(7,2), Alpha(7,0), Delta(7,0), Golf(4,3), Echo(4,-1), Foxtrot(4,-1)]
+faulty.compare(Big,Neg)=2147483644 , faulty.compare(Neg,Big)=-2147483644  (Big should rank first => negative)
+tie-breaker ignored: [Panthers(9,4), Bisons(9,4)] vs [Bisons(9,4), Panthers(9,4)]  (output depends on input order)
+subtraction comparator result: [C(3,0), B(-5,0), A(2147483647,0)]  (A is the highest but is NOT first)
+three stable sorts equal to chain: true
+SORT n=10000: comparator chain 5.6 ms, three stable sorts 20.3 ms
+SORT n=100000: comparator chain 50.2 ms, three stable sorts 95.5 ms
+SORT n=500000: comparator chain 445.3 ms, three stable sorts 554.6 ms

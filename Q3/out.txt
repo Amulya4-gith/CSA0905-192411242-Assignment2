@@ -1,0 +1,15 @@
+== Test 1: every scan is the SAME object (appears to work) ==
+size = 2  (predicted 2)
+== Test 2: same student scanned twice, NEW object each scan (no hashCode) ==
+size = 3  (predicted 3)
+contains(new 192311001) = false
+== Test 2b: with TODO 1 completed (Attendance.java as given) ==
+Unique students: 2
+== Test 3a: change regNo AFTER insertion (hashCode uses regNo) ==
+size = 1, contains(m) = false, remove(m) = false, size after remove = 1  (predicted: 1,false,false,1)
+add(m) again -> size = 2 (same object stored twice)
+== Test 3b: TreeSet with compareTo inconsistent with equals ==
+TreeSet size = 1 (different students, same length -> treated as duplicates; predicted 1)
+SCANS n=1000: HashSet 0.20 ms, TreeSet 1.96 ms, HashMap 1.03 ms
+SCANS n=10000: HashSet 0.53 ms, TreeSet 13.26 ms, HashMap 2.96 ms
+SCANS n=100000: HashSet 9.20 ms, TreeSet 111.80 ms, HashMap 9.90 ms

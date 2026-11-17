@@ -1,0 +1,16 @@
+op,size,ArrayList_ms,LinkedList_ms,ArrayDeque_ms  (avg of 5 runs; 2000 ops except add-end/iterate)
+add-end(n adds),1000,0.062,0.944,0.067
+insert+remove front(2000 each),1000,2.039,1.333,0.395
+insert+remove middle(2000 each),1000,0.397,21.704,n/a
+get k-th(2000 random),1000,0.082,1.715,n/a
+iterate all,1000,0.207,0.279,0.116
+add-end(n adds),10000,0.747,3.793,0.439
+insert+remove front(2000 each),10000,3.067,0.632,0.658
+insert+remove middle(2000 each),10000,1.581,38.946,n/a
+get k-th(2000 random),10000,0.296,9.562,n/a
+iterate all,10000,0.653,0.617,0.635
+add-end(n adds),100000,0.757,2.456,5.850
+insert+remove front(2000 each),100000,33.053,0.138,0.129
+insert+remove middle(2000 each),100000,15.898,465.943,n/a
+get k-th(2000 random),100000,0.208,214.819,n/a
+iterate all,100000,1.564,1.764,1.284

@@ -1,0 +1,16 @@
+Meena(S1) Kumar(S1) Lata(S2) Ravi(S3) John(S3) Asha(S5)
+PriorityQueue printed directly: [P5(S1), P2(S2), P7(S1), P8(S3), P4(S2), P3(S5), P6(S4), P1(S4)]
+waiting() sorted view         : [P5(S1), P7(S1), P2(S2), P4(S2), P8(S3), P1(S4), P6(S4), P3(S5)]
+treatment order               : P5(S1) P7(S1) P2(S2) P4(S2) P8(S3) P1(S4) P6(S4) P3(S5)
+hand-worked expected          : P5(S1) P7(S1) P2(S2) P4(S2) P8(S3) P1(S4) P6(S4) P3(S5)
+n,add_total_ms,ns_per_add,poll_total_ms,ns_per_poll,ns_per_poll/log2(n)
+1000,0.44,436.9,0.65,651.4,65.36
+10000,0.68,68.1,3.54,354.0,26.64
+100000,5.33,53.3,31.59,315.9,19.02
+1000000,82.05,82.1,355.51,355.5,17.84
+-- alternatives: admit n patients then serve all (ms, avg of 5) --
+n=1000: PriorityQueue 0.18 | sorted LinkedList 5.50 | 5 FIFO queues 1.17
+n=10000: PriorityQueue 1.81 | sorted LinkedList 165.03 | 5 FIFO queues 1.66
+n=50000: PriorityQueue 11.05 | sorted LinkedList 17769.25 | 5 FIFO queues 1.18
+5000 patients admit+serve (cold JVM, single run): 1.36 ms
+starvation: after 1000 critical arrivals each served immediately, OldMinor still waiting = [OldMinor(S5)]

@@ -1,0 +1,4 @@
+(2) contains(new S(192311001,Anything)) = true
+(3) 1000 scans over 100 ids -> size = 100
+(4) equal objects always had equal hash codes: true
+reversed() placed at the end: [Eagles(9,6), Panthers(9,4), Bisons(9,4), Cobras(6,1)]

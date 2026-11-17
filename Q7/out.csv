@@ -1,0 +1,5 @@
+n,original_scan_ms,original_ops(comparisons),rebuild_pq_ms,redesign_ms,orders_identical
+1000,1.6,500500,18.7,1.94,true
+5000,16.0,12502500,152.3,2.06,true
+20000,222.6,200010000,skipped (too slow),9.66,true
+OldMinor(S5, arrived t=0) is served at position 120 of 301 with aging (W=30): without aging it would be 301
